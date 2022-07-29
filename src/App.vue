@@ -1,16 +1,39 @@
 <template>
   <div>
-    <BaseHeader />
+    <BaseSearch placeholder="Cerca qui" @search="fetch"/>
   </div>
 </template>
 
 <script>
-import BaseHeader from './components/BaseHeader.vue';
-
-
-
+import BaseSearch from './components/BaseSearch.vue';
+import axios from 'axios';
 export default {
     name: "App",
-    components: { BaseHeader },
+    components: { BaseSearch },
+    data() {
+      return {
+        movies: [],
+        api: {
+          baseUri: 'https://api.themoviedb.org/3',
+          key: 'b6a442a03c6d2f2cb8e2c9395b576193',
+          language: 'it-IT',
+        },
+      };
+    },
+    methods: {
+        fetch(query) {
+          const {baseUri, key, language} = this.api;
+          const config = {
+            params: {
+              api_key: key,
+              language,
+              query,
+            },
+          };
+          axios.get(baseUri + '/search/movie', config).then((res) => {
+            this.movies = res.data.results
+          })
+        },
+    },
 }
 </script>
