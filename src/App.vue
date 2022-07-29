@@ -1,6 +1,15 @@
 <template>
   <div>
     <BaseSearch placeholder="Cerca qui" @search="fetch"/>
+    <section id="movies">
+      <h1>MOVIES</h1>
+      <ul v-for="movie in movies" :key="movie.id">
+        <li>{{movie.title}}</li>
+        <li>{{movie.original_title}}</li>
+        <li>{{movie.original_language}}</li>
+        <li>{{movie.vote_average}}</li>
+      </ul>
+    </section>
   </div>
 </template>
 
