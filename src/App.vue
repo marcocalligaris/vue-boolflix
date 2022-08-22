@@ -1,6 +1,6 @@
 <template>
   <div>
-    <BaseHeader class="container" @newSearch="search" />
+    <BaseHeader class="container" @search="search" />
     <main>
       <section id="movies-gallery">
         <h1>MOVIES</h1>

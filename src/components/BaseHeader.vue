@@ -1,6 +1,6 @@
 <template>
     <div>
-        <BaseSearch placeholder="Cerca qui" @emitSearch="newSearch" />
+        <BaseSearch placeholder="Cerca qui" @search="newSearch" />
     </div>
 </template>
 
