@@ -1,12 +1,14 @@
 {
   "name": "vue-boolflix",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve --host 0.0.0.0",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
+  
   "dependencies": {
     "axios": "^0.27.2",
     "bootstrap": "^5.2.0",
