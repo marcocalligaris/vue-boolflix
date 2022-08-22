@@ -7,7 +7,7 @@
         :placeholder="placeholder" 
         />
         <button 
-        type="button" 
+        type="button"
         @click="emitSearch">Cerca</button>
     </div>
 </template>

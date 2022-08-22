@@ -1,6 +1,6 @@
 <template>
-    <div class="py-4" id="header">
-        <div class="container d-flex justify-content-between align-items-center">
+    <div id="header">
+        <div class="container py-4 d-flex justify-content-between align-items-center">
             <a href="#"><h1>BOOLFLIX</h1></a>
             <BaseSearch placeholder="Cerca qui" @search="newSearch" />
         </div>

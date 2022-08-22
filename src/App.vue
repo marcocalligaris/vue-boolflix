@@ -1,14 +1,18 @@
 <template>
   <div>
-    <BaseHeader class="container" @search="search" />
+    <BaseHeader @search="search" />
     <main>
-      <section id="movies-gallery">
-        <h1>MOVIES</h1>
-        <MediaCard v-for="movie in movies" :key="movie.id" :media='movie' />
+      <section class="container" id="movies-gallery">
+        <h2 class="my-4">MOVIES</h2>
+        <div class="row g-5 d-flex flex-wrap justify-content-between">
+          <MediaCard class="col-3" v-for="movie in movies" :key="movie.id" :media='movie' />
+        </div>
       </section>
-      <section id="series-gallery">
-        <h1>SERIES</h1>
-        <MediaCard v-for="serie in series" :key="serie.id" :media='serie' />
+      <section class="container" id="series-gallery">
+        <h2 class="my-4">SERIES</h2>
+        <div class="row g-5 d-flex flex-wrap justify-content-between">
+          <MediaCard class="col-3" v-for="movie in movies" :key="movie.id" :media='movie' />
+        </div>
       </section>
     </main>
   </div>
@@ -57,6 +61,4 @@ export default {
     },
 };
 </script>
-<style>
-</style>
 
